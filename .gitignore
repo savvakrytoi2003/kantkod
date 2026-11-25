@@ -1,0 +1,33 @@
+# environment
+.env
+*.env
+!.env.example
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# runtime data
+reports/*.json
+!reports/.gitkeep
+backend/reports/latest.json
+backend/reports/report-*.json
+backend/reports/result-local.json
+*.log
+
+# frontend
+node_modules/
+dist/
+.vite/
+
+# editors / os
+.idea/
+.vscode/
+.DS_Store

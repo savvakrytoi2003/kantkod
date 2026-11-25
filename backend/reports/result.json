@@ -1,0 +1,149 @@
+{
+  "generated_at": "2026-11-25T00:30:30.016890Z",
+  "region": 39,
+  "vacancies": [
+    {
+      "vacancy_id": "DEMO-39-001",
+      "name": "Специалист по документообороту",
+      "source_url": "https://trudvsem.ru/vacancy/card/DEMO-39/DEMO-39-001",
+      "issues": []
+    },
+    {
+      "vacancy_id": "DEMO-39-002",
+      "name": "Помощник администратора",
+      "source_url": "https://trudvsem.ru/vacancy/card/DEMO-39/DEMO-39-002",
+      "issues": [
+        {
+          "topic": "duties",
+          "source_field": "duties",
+          "quote": "Выполнение различных поручений руководителя.",
+          "problem": "Обязанности описаны слишком общо.",
+          "recommendation": "Раскрыть конкретные задачи, инструменты и ожидаемый результат работы."
+        },
+        {
+          "topic": "salary",
+          "source_field": "salary_min, salary_max",
+          "quote": "",
+          "problem": "В вакансии отсутствуют сведения об оплате: нулевые значения не позволяют определить размер вознаграждения.",
+          "recommendation": "Указать минимальную и максимальную заработную плату в рублях либо явно обозначить, что размер оплаты обсуждается на собеседовании."
+        },
+        {
+          "topic": "schedule",
+          "source_field": "schedule",
+          "quote": "Гибкий график",
+          "problem": "Не указаны конкретные условия расписания.",
+          "recommendation": "Уточнить рабочие дни, время начала и окончания работы, продолжительность смен."
+        }
+      ]
+    },
+    {
+      "vacancy_id": "DEMO-39-003",
+      "name": "Младший аналитик данных",
+      "source_url": "https://trudvsem.ru/vacancy/card/DEMO-39/DEMO-39-003",
+      "issues": [
+        {
+          "topic": "contradiction",
+          "source_field": "requirement.experience, requirement.qualification",
+          "quote": "experience: 0 / Требуется не менее 5 лет опыта работы аналитиком данных",
+          "problem": "Структурированное значение опыта противоречит тексту требований.",
+          "recommendation": "Согласовать требования к опыту и указать единое значение."
+        }
+      ]
+    },
+    {
+      "vacancy_id": "DEMO-39-004",
+      "name": "Оператор контактного центра",
+      "source_url": "https://trudvsem.ru/vacancy/card/DEMO-39/DEMO-39-004",
+      "issues": [
+        {
+          "topic": "contradiction",
+          "source_field": "work_place_type, requirement.qualification",
+          "quote": "Работа полностью дистанционная из любого города / Обязательное ежедневное присутствие в офисе в Калининграде к 09:00",
+          "problem": "Формат работы в описании противоречит требованию о присутствии в офисе.",
+          "recommendation": "Согласовать формат работы: указать либо работу в офисе, либо удалённую работу."
+        }
+      ]
+    },
+    {
+      "vacancy_id": "DEMO-39-005",
+      "name": "Библиотекарь",
+      "source_url": "https://trudvsem.ru/vacancy/card/DEMO-39/DEMO-39-005",
+      "issues": []
+    },
+    {
+      "vacancy_id": "DEMO-39-006",
+      "name": "Специалист",
+      "source_url": "https://trudvsem.ru/vacancy/card/DEMO-39/DEMO-39-006",
+      "issues": [
+        {
+          "topic": "title",
+          "source_field": "job-name",
+          "quote": "Специалист",
+          "problem": "Название должности слишком общее и не отражает профессиональную специализацию.",
+          "recommendation": "Указать название должности с направлением деятельности, например «специалист по документообороту»."
+        },
+        {
+          "topic": "duties",
+          "source_field": "duties",
+          "quote": "Работа с документами и другие задачи по необходимости.",
+          "problem": "Обязанности описаны слишком общо.",
+          "recommendation": "Раскрыть конкретные задачи, инструменты и ожидаемый результат работы."
+        },
+        {
+          "topic": "salary",
+          "source_field": "salary_min, salary_max",
+          "quote": "salary_min: 35000, salary_max: 0",
+          "problem": "Не указана максимальная граница оплаты труда.",
+          "recommendation": "Указать верхнюю границу заработной платы либо пояснить, от чего зависит итоговая сумма."
+        },
+        {
+          "topic": "schedule",
+          "source_field": "schedule",
+          "quote": "Сменный график",
+          "problem": "Не указаны конкретные условия расписания.",
+          "recommendation": "Уточнить рабочие дни, время начала и окончания работы, продолжительность смен."
+        }
+      ]
+    },
+    {
+      "vacancy_id": "DEMO-39-007",
+      "name": "Инженер технической поддержки",
+      "source_url": "https://trudvsem.ru/vacancy/card/DEMO-39/DEMO-39-007",
+      "issues": []
+    },
+    {
+      "vacancy_id": "DEMO-39-008",
+      "name": "Координатор проектов",
+      "source_url": "https://trudvsem.ru/vacancy/card/DEMO-39/DEMO-39-008",
+      "issues": [
+        {
+          "topic": "contradiction",
+          "source_field": "schedule, requirement.qualification",
+          "quote": "schedule: Гибкий график / Пятидневная рабочая неделя с 09:00 до 18:00",
+          "problem": "Гибкий график противоречит фиксированному режиму работы в тексте вакансии.",
+          "recommendation": "Уточнить, является ли график фиксированным или гибким, и описать допустимые часы начала и окончания."
+        }
+      ]
+    },
+    {
+      "vacancy_id": "DEMO-39-009",
+      "name": "Оператор ввода данных",
+      "source_url": "https://trudvsem.ru/vacancy/card/DEMO-39/DEMO-39-009",
+      "issues": []
+    },
+    {
+      "vacancy_id": "DEMO-39-010",
+      "name": "Методист образовательных программ",
+      "source_url": "https://trudvsem.ru/vacancy/card/DEMO-39/DEMO-39-010",
+      "issues": [
+        {
+          "topic": "location",
+          "source_field": "addresses.address, requirement.qualification",
+          "quote": "г. Калининград / Формат и адрес рабочего места уточняются при собеседовании.",
+          "problem": "Адрес и формат работы указаны не полностью.",
+          "recommendation": "Указать фактический формат работы (офисный, удалённый или гибридный) и точный адрес."
+        }
+      ]
+    }
+  ]
+}

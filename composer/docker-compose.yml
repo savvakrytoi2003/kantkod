@@ -1,0 +1,57 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: kantkod-postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-kantkod}
+      POSTGRES_USER: ${POSTGRES_USER:-kantkod}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-kantkod}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-kantkod} -d ${POSTGRES_DB:-kantkod}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: kantkod-redis
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ../backend
+    container_name: kantkod-backend
+    env_file:
+      - path: ../backend/.env
+        required: false
+    environment:
+      APP_ENV: ${APP_ENV:-production}
+      DATABASE_URL: ${DATABASE_URL:-postgresql+asyncpg://kantkod:kantkod@postgres:5432/kantkod}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      SOURCE_API_URL: ${SOURCE_API_URL:-http://opendata.trudvsem.ru/api/v1/vacancies/region/39}
+      SOURCE_REGION: ${SOURCE_REGION:-39}
+      SOURCE_MAX_VACANCIES: ${SOURCE_MAX_VACANCIES:-100}
+      SOURCE_PAGE_SIZE: ${SOURCE_PAGE_SIZE:-50}
+      SYNC_INTERVAL_MINUTES: ${SYNC_INTERVAL_MINUTES:-60}
+      SCHEDULER_ENABLED: ${SCHEDULER_ENABLED:-true}
+      REPORTS_DIR: ${REPORTS_DIR:-reports}
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../backend/reports:/app/reports
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
